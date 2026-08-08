@@ -203,7 +203,7 @@ export default function App() {
   const handleAuth = async (e) => {
     e.preventDefault();
     if (isSignUp) {
-      const { error } = await supabase.auth.signUp({ email, password ,option :{emailRedirectTo : window.location.origin}
+      const { error } = await supabase.auth.signUp({ email, password , options :{emailRedirectTo : window.location.origin}
       });
       if (error) alert(error.message);
       else alert('Account created! Check your email to confirm.');
